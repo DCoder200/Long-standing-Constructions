@@ -1,0 +1,63 @@
+{
+    "Sandbox_LSC": "LongStandingConstructions",
+
+    "Sandbox_LSC_ModEnabled": "Enable Mod",
+    "Sandbox_LSC_ModEnabled_tooltip": "Enables or disables the mod. When disabled all thresholds will be ignored and object properties will be reset to defaults if attacked.",
+
+    "Sandbox_LSC_DebugEnabled": "Enable Debug",
+    "Sandbox_LSC_DebugEnabled_tooltip": "Enables or disables debug prints in the console.",
+
+    "Sandbox_LSC_ThresholdPerLevel": "Threshold Increase Per Level",
+    "Sandbox_LSC_ThresholdPerLevel_tooltip": "How much should be added to the zombie threshold per level of an object.",
+
+    "Sandbox_LSC_BarricadePlanks": "Barricade: Planks",
+    "Sandbox_LSC_BarricadePlanks_tooltip": "WIP: does nothing",
+
+    "Sandbox_LSC_BarricadeMetalSheet": "Barricade: Metal Sheets",
+    "Sandbox_LSC_BarricadeMetalSheet_tooltip": "WIP: does nothing",
+
+    "Sandbox_LSC_BarricadeMetalBar": "Barricade: Metal Bars",
+    "Sandbox_LSC_BarricadeMetalBar_tooltip": "WIP: does nothing.",
+
+    "Sandbox_LSC_BrickWall": "Brick Wall",
+    "Sandbox_LSC_BrickWall_tooltip": "Sets the zombie threshold for brick walls.",
+
+    "Sandbox_LSC_DoubleDoor": "Double Door",
+    "Sandbox_LSC_DoubleDoor_tooltip": "WIP: does nothing.",
+
+    "Sandbox_LSC_Door": "Door",
+    "Sandbox_LSC_Door_tooltip": "WIP: does nothing.",
+
+    "Sandbox_LSC_LogWall": "Log Wall",
+    "Sandbox_LSC_LogWall_tooltip": "Sets the zombie threshold for log walls.",
+
+    "Sandbox_LSC_MetalWall": "Metal Wall",
+    "Sandbox_LSC_MetalWall_tooltip": "Sets the zombie threshold for metal walls.",
+
+    "Sandbox_LSC_MetalBigMetalFence": "Large Metal Fence",
+    "Sandbox_LSC_MetalBigMetalFence_tooltip": "Sets the zombie threshold for large metal fences.",
+
+    "Sandbox_LSC_MetalPoleFenceGate": "Metal Pole Fence Gate",
+    "Sandbox_LSC_MetalPoleFenceGate_tooltip": "Sets the zombie threshold for metal pole fence gates.",
+
+    "Sandbox_LSC_DoubleFenceGate": "Double Fence Gate",
+    "Sandbox_LSC_DoubleFenceGate_tooltip": "Sets the zombie threshold for double fence gates.",
+
+    "Sandbox_LSC_MetalBigWireFence": "Large Metal Wire Fence",
+    "Sandbox_LSC_MetalBigWireFence_tooltip": "Sets the zombie threshold for large metal wire fences.",
+
+    "Sandbox_LSC_DoubleWireGate": "Double Wire Gate",
+    "Sandbox_LSC_DoubleWireGate_tooltip": "Sets the zombie threshold for double wire gates.",
+
+    "Sandbox_LSC_MetalDoor": "Metal Door",
+    "Sandbox_LSC_MetalDoor_tooltip": "WIP: does nothing.",
+
+    "Sandbox_LSC_WoodenWall": "Wooden Wall",
+    "Sandbox_LSC_WoodenWall_tooltip": "Sets the zombie threshold for wooden walls.",
+
+    "Sandbox_LSC_WoodenDoor": "Wooden Door",
+    "Sandbox_LSC_WoodenDoor_tooltip": "WIP: does nothing.",
+
+    "Sandbox_LSC_StoneWall": "Stone Wall",
+    "Sandbox_LSC_StoneWall_tooltip": "Sets the zombie threshold for stone walls."
+}

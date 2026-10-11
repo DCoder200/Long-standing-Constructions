@@ -1,0 +1,6 @@
+version=1
+id=3818033406
+title=Long Standing Constructions
+description=Makes all wall types and other objects require a set number of zombies attacking it before taking any damage. 
+tags=Build 42;Misc;Realistic;WIP
+visibility=public

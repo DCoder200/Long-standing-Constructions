@@ -1,0 +1,4 @@
+id=LongStandingConstructions
+name=Long-standing Constructions
+description=Makes all walls and other constructions require a set number of zombies attacking before they take any damage.
+poster=preview.png

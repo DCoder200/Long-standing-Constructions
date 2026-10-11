@@ -1,0 +1,199 @@
+VERSION = 1,
+option LSC.ModEnabled
+{
+    type = boolean,
+    default = true,
+    page = LSC,
+    translation = LSC_ModEnabled,
+}
+
+option LSC.DebugEnabled
+{
+    type = boolean,
+    default = false,
+    page = LSC,
+    translation = LSC_DebugEnabled,
+}
+
+option LSC.ThresholdPerLevel
+{
+    type = double,
+    min = 0,
+    max = 10,
+    default = 0.5,
+    page = LSC,
+    translation = LSC_ThresholdPerLevel,
+}
+
+option LSC.BarricadePlanks
+{
+    type = integer,
+    min = 0,
+    max = 20,
+    default = 1,
+    page = LSC,
+    translation = LSC_BarricadePlanks,
+}
+
+option LSC.BarricadeMetalSheet
+{
+    type = integer,
+    min = 0,
+    max = 20,
+    default = 3,
+    page = LSC,
+    translation = LSC_BarricadeMetalSheet,
+}
+
+option LSC.BarricadeMetalBar
+{
+    type = integer,
+    min = 0,
+    max = 20,
+    default = 3,
+    page = LSC,
+    translation = LSC_BarricadeMetalBar,
+}
+
+option LSC.BrickWall
+{
+    type = integer,
+    min = 0,
+    max = 20,
+    default = 8,
+    page = LSC,
+    translation = LSC_BrickWall,
+}
+
+option LSC.DoubleDoor
+{
+    type = integer,
+    min = 0,
+    max = 20,
+    default = 4,
+    page = LSC,
+    translation = LSC_DoubleDoor,
+}
+
+option LSC.Door
+{
+    type = integer,
+    min = 0,
+    max = 20,
+    default = 4,
+    page = LSC,
+    translation = LSC_Door,
+}
+
+option LSC.LogWall
+{
+    type = integer,
+    min = 0,
+    max = 20,
+    default = 6,
+    page = LSC,
+    translation = LSC_LogWall,
+}
+
+option LSC.MetalWall
+{
+    type = integer,
+    min = 0,
+    max = 20,
+    default = 5,
+    page = LSC,
+    translation = LSC_MetalWall,
+}
+
+option LSC.MetalBigMetalFence
+{
+    type = integer,
+    min = 0,
+    max = 20,
+    default = 7,
+    page = LSC,
+    translation = LSC_MetalBigMetalFence,
+}
+
+option LSC.MetalPoleFenceGate
+{
+    type = integer,
+    min = 0,
+    max = 20,
+    default = 7,
+    page = LSC,
+    translation = LSC_MetalPoleFenceGate,
+}
+
+option LSC.DoubleFenceGate
+{
+    type = integer,
+    min = 0,
+    max = 20,
+    default = 6,
+    page = LSC,
+    translation = LSC_DoubleFenceGate,
+}
+
+option LSC.MetalBigWireFence
+{
+    type = integer,
+    min = 0,
+    max = 20,
+    default = 6,
+    page = LSC,
+    translation = LSC_MetalBigWireFence,
+}
+
+option LSC.DoubleWireGate
+{
+    type = integer,
+    min = 0,
+    max = 20,
+    default = 5,
+    page = LSC,
+    translation = LSC_DoubleWireGate,
+}
+
+option LSC.MetalDoor
+{
+    type = integer,
+    min = 0,
+    max = 20,
+    default = 2,
+    page = LSC,
+    translation = LSC_MetalDoor,
+}
+
+option LSC.WoodenWall
+{
+    type = integer,
+    min = 0,
+    max = 20,
+    default = 2,
+    page = LSC,
+    translation = LSC_WoodenWall,
+}
+
+option LSC.WoodenDoor
+{
+    type = integer,
+    min = 0,
+    max = 20,
+    default = 1,
+    page = LSC,
+    translation = LSC_WoodenDoor,
+}
+
+option LSC.StoneWall
+{
+    type = integer,
+    min = 0,
+    max = 20,
+    default = 10,
+    page = LSC,
+    translation = LSC_StoneWall,
+}
+
+
+
