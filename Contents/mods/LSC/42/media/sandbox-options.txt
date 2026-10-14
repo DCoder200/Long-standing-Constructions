@@ -35,6 +35,16 @@ option LSC.BarricadePlanks
     translation = LSC_BarricadePlanks,
 }
 
+option LSC.AddedPlankThreshold
+{
+    type = double,
+    min = 0,
+    max = 10,
+    default = 0.25,
+    page = LSC,
+    translation = LSC_AddedPlankThreshold,
+}
+
 option LSC.BarricadeMetalSheet
 {
     type = integer,

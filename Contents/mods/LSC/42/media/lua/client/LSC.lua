@@ -2,7 +2,6 @@ print("### LSC STARTED ###")
 
 local modEnabled = SandboxVars.LSC.ModEnabled or true
 local debug = SandboxVars.LSC.DebugEnabled or true
-local get_square = getSquare
 local instanceof = instanceof
 local PRINT_INTERVAL = 5 -- seconds
 local MAX_INT = 2147483647
@@ -144,14 +143,19 @@ end
 
 -- function to get threshold of zombies for each object
 local lastPrintThreshold = 0
-local getThreshold = function(baseObjectType, level)
+local getThreshold = function(baseObjectType, level, numberPlanks)
     if not modEnabled then return 1 end -- return 1 if mod disabled
 
     local threshold = SandboxVars.LSC[baseObjectType]
 
     -- add to the threshold based on levels if object has a level
     if level then 
-        threshold = threshold + SandboxVars.LSC.ThresholdPerLevel * level
+        threshold = math.floor(threshold + SandboxVars.LSC.ThresholdPerLevel * level)
+    end
+
+    -- add to the threshold of plank barricades based on number of planks
+    if baseObjectType == "BarricadePlanks" then
+        threshold = math.floor(threshold + SandboxVars.LSC.AddedPlankThreshold * numberPlanks)
     end
 
     -- debug print
@@ -160,8 +164,10 @@ local getThreshold = function(baseObjectType, level)
         if now - lastPrintThreshold > PRINT_INTERVAL then 
             lastPrintThreshold = now
 
-            print("Object:", baseObjectType)
-            print("Threshold:", threshold)
+            if numberPlanks then print("Planks: ", numberPlanks) end
+
+            print("Object: ", baseObjectType)
+            print("Threshold: ", threshold)
         end
     end
 
@@ -207,6 +213,7 @@ end
 
 -- function to handle barricades and doors
 local handleBarricade = function(zombieCount, barricade)
+    local countPlanks
 
     -- get barricade type using IsoBarricade methods
     local barricadeType 
@@ -216,10 +223,11 @@ local handleBarricade = function(zombieCount, barricade)
         barricadeType = "BarricadeMetalBar"
     else
         barricadeType = "BarricadePlanks"
+        countPlanks = barricade:getNumPlanks()
     end
 
-    -- get threshold for object
-    local threshold = getThreshold(barricadeType)
+    -- get threshold for object (pass nil for level because barricades have none)
+    local threshold = getThreshold(barricadeType, nil, countPlanks)
 
     -- over threshold, remove dictionary entry so it can be refreshed if it goes back below threshold
     if zombieCount >= threshold then

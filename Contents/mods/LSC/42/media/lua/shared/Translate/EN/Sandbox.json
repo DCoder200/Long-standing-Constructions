@@ -13,6 +13,9 @@
     "Sandbox_LSC_BarricadePlanks": "Barricade: Planks",
     "Sandbox_LSC_BarricadePlanks_tooltip": "Sets the zombie threshold for wooden plank barricades.",
 
+    "Sandbox_LSC_AddedPlankThreshold": "Additional Plank Threshold Per Plank",
+    "Sandbox_LSC_AddedPlankThreshold_tooltip": "Adds onto the base threshold for plank barricades based on number of planks added. This value is added for each plank (1-4x, 0 to disable)",
+
     "Sandbox_LSC_BarricadeMetalSheet": "Barricade: Metal Sheets",
     "Sandbox_LSC_BarricadeMetalSheet_tooltip": "Sets the zombie threshold for metal sheet barricades.",
 
