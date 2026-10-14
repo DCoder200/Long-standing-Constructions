@@ -20,7 +20,7 @@ option LSC.ThresholdPerLevel
     type = double,
     min = 0,
     max = 10,
-    default = 0.5,
+    default = 1,
     page = LSC,
     translation = LSC_ThresholdPerLevel,
 }
@@ -75,14 +75,14 @@ option LSC.DoubleDoor
     translation = LSC_DoubleDoor,
 }
 
-option LSC.Door
+option LSC.GarageDoor
 {
     type = integer,
     min = 0,
     max = 20,
-    default = 4,
+    default = 3,
     page = LSC,
-    translation = LSC_Door,
+    translation = LSC_GarageDoor,
 }
 
 option LSC.LogWall
@@ -155,16 +155,6 @@ option LSC.DoubleWireGate
     translation = LSC_DoubleWireGate,
 }
 
-option LSC.MetalDoor
-{
-    type = integer,
-    min = 0,
-    max = 20,
-    default = 2,
-    page = LSC,
-    translation = LSC_MetalDoor,
-}
-
 option LSC.WoodenWall
 {
     type = integer,
@@ -173,16 +163,6 @@ option LSC.WoodenWall
     default = 2,
     page = LSC,
     translation = LSC_WoodenWall,
-}
-
-option LSC.WoodenDoor
-{
-    type = integer,
-    min = 0,
-    max = 20,
-    default = 1,
-    page = LSC,
-    translation = LSC_WoodenDoor,
 }
 
 option LSC.StoneWall

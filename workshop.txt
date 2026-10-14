@@ -1,6 +1,38 @@
 version=1
 id=3818033406
-title=Long Standing Constructions
-description=Makes all wall types and other objects require a set number of zombies attacking it before taking any damage. 
+title=Long-standing Constructions
+description=Makes all wall types and other supported objects require a set number of zombies attacking them before taking any damage.
+
+description=
+
+description=Credits to [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3205738591]Long Standing Wooden Structures[/url] and [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3199474685]Long Standing Metal Structures[/url] for inspiring me to create this for B42. These both still function from my testing but are missing new B42 objects and handle damage blocking differently.
+
+description=
+
+description=Supports walls, barricades, double tall fence doors, and garage doors.
+
+description=
+
+description=Can be disabled to restore vanilla behaviour.
+
+description=
+
+description=Mod cleans up after itself every hour. If a wall hasn't been attacked for a certain period it will be reset and its mod data cleared.
+
+description=
+
+description=This will be fixed in a later update. For now, I recommend running your save with the mod disabled for a while before uninstalling, or simply continue playing with it disabled.
+
+description=
+
+description=Workshop ID: 3818033406
+
+description=
+
+description=Mod ID: LongStandingConstructions
+
+description=
+
+description=GitHub: https://github.com/DCoder200/Long-standing-Constructions/tree/main
 tags=Build 42;Misc;Realistic;WIP
 visibility=public
