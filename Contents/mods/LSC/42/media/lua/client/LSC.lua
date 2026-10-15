@@ -1,7 +1,16 @@
 print("### LSC STARTED ###")
 
-local modEnabled = SandboxVars.LSC.ModEnabled or true
-local debug = SandboxVars.LSC.DebugEnabled or true
+-- toggles
+local modEnabled = SandboxVars.LSC.ModEnabled
+local debug = SandboxVars.LSC.DebugEnabled
+
+-- set to true if they're nil for whatever reason
+local modEnabled = SandboxVars.LSC.ModEnabled
+if modEnabled == nil then modEnabled = true end
+
+local debug = SandboxVars.LSC.DebugEnabled
+if debug == nil then debug = true end
+
 local instanceof = instanceof
 local PRINT_INTERVAL = 5 -- seconds
 local MAX_INT = 2147483647
@@ -346,7 +355,12 @@ local handleZombieUpdate = function(zombie)
             print("Mod enabled:", modEnabled)
             print("Debug enabled:", debug)
             print("target: ", target)
-            print("Class:", target:getClass():getSimpleName())
+            
+            -- some doors don't have get simple name method, windows don't either
+            if not instanceof(target, "IsoDoor") and not instanceof(target, "IsoWIndow") then 
+                print("Class:", target:getClass():getSimpleName()) 
+            end
+
             print("Object name:", target:getObjectName())
 
             if instanceof(target, "IsoThumpable") then
