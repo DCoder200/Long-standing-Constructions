@@ -2,13 +2,13 @@ print("### LSC STARTED ###")
 
 -- toggles
 local modEnabled = SandboxVars.LSC.ModEnabled
-local debug = SandboxVars.LSC.DebugEnabled
+local debug = true
 
 -- set to true if they're nil for whatever reason
 local modEnabled = SandboxVars.LSC.ModEnabled
 if modEnabled == nil then modEnabled = true end
 
-local debug = SandboxVars.LSC.DebugEnabled
+--local debug = SandboxVars.LSC.DebugEnabled
 if debug == nil then debug = true end
 
 local instanceof = instanceof
@@ -282,7 +282,8 @@ local handleGarageDoor = function(zombieCount, garageDoor)
 end
 
 -- zombie update handler, includes its target
-local lastPrintTarget = 0
+local PRINT_EVERY = 300
+local printCounter = 0
 local handleZombieUpdate = function(zombie)
     local target = zombie:getThumpTarget()
     if not target then return end -- return if no target for zombie
@@ -352,16 +353,20 @@ local handleZombieUpdate = function(zombie)
 
     -- debug print
     if debug then
-        local now = getTimestamp()
-        if now - lastPrintTarget > PRINT_INTERVAL then 
-            lastPrintTarget = now
+        printCounter = printCounter + 1
+
+        -- only print every PRINT_EVERY calls
+        if printCounter >= PRINT_EVERY then
+            printCounter = 0
+
             print("Mod enabled:", modEnabled)
             print("Debug enabled:", debug)
-            print("target: ", target)
-            
-            -- some doors don't have get simple name method, windows don't either
-            if not instanceof(target, "IsoDoor") and not instanceof(target, "IsoWIndow") then 
-                print("Class:", target:getClass():getSimpleName()) 
+            print("Target:", target)
+
+            -- some doors and windows don't support getSimpleName()
+            if not instanceof(target, "IsoDoor")
+                and not instanceof(target, "IsoWindow") then
+                print("Class:", target:getClass():getSimpleName())
             end
 
             print("Object name:", target:getObjectName())
@@ -376,8 +381,8 @@ local handleZombieUpdate = function(zombie)
                 print("Is metal bar:", target:isMetalBar())
             end
 
-            if not instanceof(target, "IsoWindowFrame") then 
-                print("Object health:", target:getHealth()) 
+            if not instanceof(target, "IsoWindowFrame") then
+                print("Object health:", target:getHealth())
             end
 
             print("Zombie count:", zombieCount)
