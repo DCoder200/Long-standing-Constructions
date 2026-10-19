@@ -1,14 +1,11 @@
 print("### LSC STARTED ###")
 
 -- toggles
-local modEnabled = SandboxVars.LSC.ModEnabled
-local debug = true
-
 -- set to true if they're nil for whatever reason
 local modEnabled = SandboxVars.LSC.ModEnabled
 if modEnabled == nil then modEnabled = true end
 
---local debug = SandboxVars.LSC.DebugEnabled
+local debug = SandboxVars.LSC.DebugEnabled
 if debug == nil then debug = true end
 
 local instanceof = instanceof
