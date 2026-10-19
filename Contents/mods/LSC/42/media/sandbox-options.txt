@@ -70,7 +70,7 @@ option LSC.BrickWall
     type = integer,
     min = 0,
     max = 20,
-    default = 8,
+    default = 9,
     page = LSC,
     translation = LSC_BrickWall,
 }
@@ -90,7 +90,7 @@ option LSC.GarageDoor
     type = integer,
     min = 0,
     max = 20,
-    default = 3,
+    default = 4,
     page = LSC,
     translation = LSC_GarageDoor,
 }
@@ -110,7 +110,7 @@ option LSC.MetalWall
     type = integer,
     min = 0,
     max = 20,
-    default = 5,
+    default = 6,
     page = LSC,
     translation = LSC_MetalWall,
 }

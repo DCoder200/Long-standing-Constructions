@@ -222,6 +222,8 @@ end
 
 -- function to handle barricades and doors
 local handleBarricade = function(zombieCount, barricade)
+    if not modEnabled then return end -- do nothing if mod disabled
+
     local countPlanks
 
     -- get barricade type using IsoBarricade methods
@@ -257,6 +259,7 @@ end
 
 -- function to handle garage doors, could be merged into handleBarricade but might diverge in the future
 local handleGarageDoor = function(zombieCount, garageDoor)
+    if not modEnabled then return end -- do nothing if mod disabled
 
     -- get threshold for object
     local threshold = getThreshold("GarageDoor")
